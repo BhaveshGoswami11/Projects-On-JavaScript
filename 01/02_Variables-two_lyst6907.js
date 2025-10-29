@@ -1,7 +1,7 @@
 const uid = "abc123";
 
-var fullName = "Hitesh Choudhary";
-var email = "hitesh@lco.dev";
+var fullName = "Casey";
+var email = "casey@openai.dev";
 var password = "123456";
 var confirmPassword = "123456";
 var courseCount = 0;
