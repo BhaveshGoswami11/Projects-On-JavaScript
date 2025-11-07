@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BMI Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <button id="homeBtn">Home</button>
+    <button id="aboutBtn">About</button>
+  </nav>
+
+  <h1>BMI Calculator</h1>
+
+  <div class="container" id="homeSection">
+    <form id="bmiForm">
+      <label for="weight">Weight (kg):</label>
+      <input type="number" id="weight" placeholder="Enter your weight" required />
+
+      <label for="height">Height (cm):</label>
+      <input type="number" id="height" placeholder="Enter your height" required />
+
+      <button type="submit">Calculate BMI</button>
+    </form>
+    <div id="result"></div>
+  </div>
+
+  <div id="aboutSection">
+    <h2>About BMI Calculator</h2>
+    <p>
+      The Body Mass Index (BMI) Calculator is a simple web app that helps you 
+      measure your body fat based on your height and weight. It classifies your 
+      result as underweight, normal weight, overweight, or obese.  
+    </p>
+    <p>
+      This tool is useful for keeping track of your health and maintaining 
+      a balanced lifestyle.
+    </p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
