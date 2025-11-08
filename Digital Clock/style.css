@@ -1,0 +1,93 @@
+/* Basic reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0f1724;
+  --card: #0b1220;
+  --accent: #00ffd5;
+  --muted: #9aa7b2;
+  --glass: rgba(255,255,255,0.04);
+  --radius: 14px;
+  --font-size-large: clamp(2.4rem, 6vw, 6rem);
+}
+
+/* page layout */
+html,body {
+  height: 100%;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Courier New", monospace;
+  background: linear-gradient(180deg, #071025 0%, var(--bg) 100%);
+  color: #e6eef6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* container for centering */
+.container {
+  padding: 24px;
+  width: 100%;
+  max-width: 720px;
+}
+
+/* card */
+.clock-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: 0 8px 30px rgba(2,6,23,0.6), 0 1px 0 rgba(255,255,255,0.02) inset;
+  border: 1px solid rgba(255,255,255,0.03);
+  text-align: center;
+}
+
+/* clock digits */
+.clock {
+  font-weight: 700;
+  font-size: var(--font-size-large);
+  letter-spacing: -0.03em;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));
+  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+}
+
+/* colon separator slightly smaller and lighter */
+.sep {
+  color: var(--muted);
+  font-size: 0.55em;
+  margin: 0 2px;
+  transform: translateY(-6%);
+}
+
+/* AM/PM badge */
+.ampm {
+  font-size: 0.28em;
+  color: var(--accent);
+  background: rgba(0,255,213,0.06);
+  border-radius: 6px;
+  padding: 6px 8px;
+  margin-left: 10px;
+  align-self: center;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+/* date line under the clock */
+.date {
+  margin-top: 14px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* small-screen adjustments */
+@media (max-width: 420px) {
+  .clock {
+    font-size: clamp(1.6rem, 12vw, 3.5rem);
+    gap: 6px;
+    padding: 6px 12px;
+  }
+
+  .ampm { display: none; } /* optional: hide AM/PM on very small screens */
+}
