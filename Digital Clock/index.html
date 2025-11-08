@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Digital Clock</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <div class="clock-card" role="timer" aria-live="polite" aria-atomic="true">
+      <div id="banner"><span><b>Your Local Time</b></span></div>
+      <div id="clock" class="clock">
+        <span id="hours">--</span>
+        <span class="sep">:</span>
+        <span id="minutes">--</span>
+        <span class="sep">:</span>
+        <span id="seconds">--</span>
+        <span id="ampm" class="ampm">--</span>
+      </div>
+
+      <div id="date" class="date">Loading date...</div>
+    </div>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
