@@ -3,35 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Interactive JS Events Demo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div>
-        <h1>About Events In JS</h1>
-        <p>Events are actions or occurrences that happen in the system you are programming, which the system tells you about so your code can respond to them. In JavaScript, events are used to trigger functions when certain actions occur, such as user interactions (clicks, key presses), page loading, or form submissions.</p>
-        <h2>Common Types of Events in JavaScript</h2>
-        <ul>
-            <li><strong>Click Event:</strong> Triggered when an element is clicked.</li>
-            <li><strong>Mouse Events:</strong> Includes events like mouseover, mouseout, mousemove, etc.</li>
-            <li><strong>Keyboard Events:</strong> Includes keydown, keyup, and keypress events.</li>
-            <li><strong>Form Events:</strong> Includes submit, change, focus, and blur events.</li>
-            <li><strong>Window Events:</strong> Includes load, resize, scroll, and unload events.</li>
+
+    <div class="container">
+        <h1>JavaScript Events Demo</h1>
+        <p class="intro">
+            JavaScript events allow webpages to react to user actions such as clicking, typing, or moving the mouse.
+            Explore the examples below by interacting with buttons and input fields.
+        </p>
+
+        <h2>Examples of Common Events</h2>
+
+        <ul class="event-list">
+            <li><strong>Click Event:</strong> Triggered when a button or element is clicked.</li>
+            <li><strong>Mouse Events:</strong> Triggered when the mouse enters, leaves, or moves over an element.</li>
+            <li><strong>Keyboard Events:</strong> Triggered when a key is pressed or released.</li>
+            <li><strong>Form Events:</strong> Triggered when input changes or forms are submitted.</li>
+            <li><strong>Window Events:</strong> Triggered on scroll, resize, or page load.</li>
         </ul>
-       <button id="start">Start</button>
-       <button id="stop">Stop</button>
+
+        <div class="interactive-box">
+            <button id="start">Start Logging</button>
+            <button id="stop">Stop Logging</button>
+            <input type="text" id="textInput" placeholder="Type something...">
+        </div>
+
+        <h3>Event Log</h3>
+        <div id="eventLog" class="log-box">
+            <p class="placeholder">Events will appear here...</p>
+        </div>
     </div>
-    <script>
-        const startButton = document.getElementById('start');
-        const stopButton = document.getElementById('stop');
 
-        startButton.addEventListener('click', function() {
-            alert('Start button clicked!');
-            
-        });
-
-        stopButton.addEventListener('click', function() {
-            alert('Stop button clicked!');
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
