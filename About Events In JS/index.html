@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>About Events In JS</h1>
+        <p>Events are actions or occurrences that happen in the system you are programming, which the system tells you about so your code can respond to them. In JavaScript, events are used to trigger functions when certain actions occur, such as user interactions (clicks, key presses), page loading, or form submissions.</p>
+        <h2>Common Types of Events in JavaScript</h2>
+        <ul>
+            <li><strong>Click Event:</strong> Triggered when an element is clicked.</li>
+            <li><strong>Mouse Events:</strong> Includes events like mouseover, mouseout, mousemove, etc.</li>
+            <li><strong>Keyboard Events:</strong> Includes keydown, keyup, and keypress events.</li>
+            <li><strong>Form Events:</strong> Includes submit, change, focus, and blur events.</li>
+            <li><strong>Window Events:</strong> Includes load, resize, scroll, and unload events.</li>
+        </ul>
+       <button id="start">Start</button>
+       <button id="stop">Stop</button>
+    </div>
+    <script>
+        const startButton = document.getElementById('start');
+        const stopButton = document.getElementById('stop');
+
+        startButton.addEventListener('click', function() {
+            alert('Start button clicked!');
+            
+        });
+
+        stopButton.addEventListener('click', function() {
+            alert('Stop button clicked!');
+        });
+    </script>
+</body>
+</html>
